@@ -4,9 +4,9 @@ describe Authenticator do
 
   describe ".authenticate_test_environment" do
     it "correctly sets token and auth password" do
-      Authenticator.authenticate_test_environment('KEY','PASSWORD')
-      expect(Authenticator.account_sid).to eql('KEY')
-      expect(Authenticator.auth_token).to eql('PASSWORD')
+      Authenticator.authenticate_test_environment
+      expect(Authenticator.account_sid).not_to be_nil
+      expect(Authenticator.auth_token).not_to be_nil
     end
   end
 end
