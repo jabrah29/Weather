@@ -62,6 +62,24 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="httparty (vbundled(0.15.6)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/httparty-0.15.6/bin" />
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/httparty-0.15.6/lib" />
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/httparty-0.15.6/script" />
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/httparty-0.15.6/website" />
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/httparty-0.15.6/features" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/httparty-0.15.6/bin" />
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/httparty-0.15.6/lib" />
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/httparty-0.15.6/script" />
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/httparty-0.15.6/website" />
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/httparty-0.15.6/features" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="jwt (vbundled(1.5.6)) [path][gem]">
         <CLASSES>
           <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/jwt-1.5.6/lib" />
@@ -86,12 +104,54 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="mini_portile2 (vbundled(2.3.0)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/mini_portile2-2.3.0/lib" />
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/mini_portile2-2.3.0/concourse" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/mini_portile2-2.3.0/lib" />
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/mini_portile2-2.3.0/concourse" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="multi_xml (vbundled(0.6.0)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/multi_xml-0.6.0/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/multi_xml-0.6.0/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="multipart-post (vbundled(2.0.0)) [path][gem]">
         <CLASSES>
           <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/multipart-post-2.0.0/lib" />
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/multipart-post-2.0.0/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="nokogiri (vbundled(1.8.1)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/nokogiri-1.8.1/bin" />
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/nokogiri-1.8.1/ext" />
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/nokogiri-1.8.1/lib" />
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/nokogiri-1.8.1/tasks" />
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/nokogiri-1.8.1/patches" />
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/nokogiri-1.8.1/suppressions" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/nokogiri-1.8.1/bin" />
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/nokogiri-1.8.1/ext" />
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/nokogiri-1.8.1/lib" />
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/nokogiri-1.8.1/tasks" />
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/nokogiri-1.8.1/patches" />
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/nokogiri-1.8.1/suppressions" />
         </SOURCES>
       </library>
     </orderEntry>
