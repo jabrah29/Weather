@@ -1,27 +1,20 @@
-require 'envyable'
 
 module Authenticator
 
-  @account_sid = ''
-  @auth_token = ''
-  def self.load_test_environment
-    Envyable.load('./config/env.yml', 'test')
+  API_KEY = 'TWILIO_KEY'
+  AUTH_TOKEN = 'TWILIO_SECRET'
+  TEST_API_KEY = 'TEST_TWILIO_KEY'
+  TEST_API_SECRET = 'TEST_TWILIO_SECRET'
+
+
+  def self.authenticate_test_environment
+    @account_sid = ENV[TEST_API_KEY]
+    @auth_token = ENV[TEST_API_SECRET]
   end
 
-  def self.load_dev_environment
-    Envyable.load('./config/env.yml', 'development')
-  end
-
-  def self.authenticate_test_environment(key,auth_token)
-    load_test_environment
-    @account_sid = key
-    @auth_token = auth_token
-  end
-
-  def self.authenticate_dev_environment(key,auth_token)
-    load_dev_environment
-    @account_sid = key
-    @auth_token = auth_token
+  def self.authenticate_dev_environment
+    @account_sid = ENV[API_KEY]
+    @auth_token = ENV[AUTH_TOKEN]
   end
 
   def self.account_sid
