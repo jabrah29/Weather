@@ -12,6 +12,16 @@
     <orderEntry type="jdk" jdkName="RVM: ruby-2.4.1" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
+      <library name="awesome_print (vbundled(1.8.0)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/awesome_print-1.8.0/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/awesome_print-1.8.0/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="byebug (vbundled(9.1.0)) [path][gem]">
         <CLASSES>
           <root url="file://$MODULE_DIR$/.bundle/ruby/2.4.0/gems/byebug-9.1.0/bin" />

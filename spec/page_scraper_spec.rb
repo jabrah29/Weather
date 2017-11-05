@@ -7,18 +7,18 @@ describe PageScraper do
     @page_scraper = PageScraper.new
   end
 
-  describe "page scraper retrieves the html page" do
-    it "returns an html page" do
-      page = @page_scraper.html_page
-      expect(page.ok?).to be_truthy
+  describe "#nokogiri" do
+    it "returns a Nokogiri object" do
+      nokogiri_obj = @page_scraper.nokogiri
+      expect(nokogiri_obj).not_to be_nil
     end
   end
 
-  describe "page scraper uses html page to create Nokogiri object" do
-    it "returns a Nokogiri object" do
-      page = @page_scraper.html_page
-      nokogiri_obj = @page_scraper.create_nokogiri_instance(page)
-      byebug
+  describe "#get_hourly_table" do
+    it "returns a hash of times and weather report object" do
+      table = @page_scraper.get_hourly_table
+      expect(table).not_to be_nil
+
     end
   end
 
