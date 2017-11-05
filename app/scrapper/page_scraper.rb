@@ -6,7 +6,7 @@ require_relative '../hourly_weather'
 
 class PageScraper
   WEATHER_COM_URL = "https://weather.com/weather/hourbyhour/l/CAXX0504:1:CA"
-
+  TABLE_SEARCH_QUERY = '.twc-table'
   attr_reader :nokogiri
 
   def nokogiri
@@ -19,7 +19,7 @@ class PageScraper
 
   def get_hourly_table
     hourly_table ={}
-    table = nokogiri.at('.twc-table')
+    table = nokogiri.at(TABLE_SEARCH_QUERY)
     table.search('tr').drop(1).each do |tr|
       val = convert_row_into_hash tr
       hourly_report = new_object_from_hash val
