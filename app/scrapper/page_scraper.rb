@@ -22,12 +22,7 @@ class PageScraper
     table = nokogiri.at('.twc-table')
     table.search('tr').drop(1).each do |tr|
       val = convert_row_into_hash tr
-      hourly_report = HourlyWeatherBuilder.new
-          .hour(val[:time])
-          .precipitation(val[:precipitation])
-          .description(val[:description])
-          .temperature(val[:temperature])
-          .hourly_weather
+      hourly_report = new_object_from_hash val
       hourly_table[val[:time]] = hourly_report
     end
     hourly_table
@@ -45,8 +40,13 @@ class PageScraper
     }
   end
 
-  def new_object_from_array(array)
-
+  def new_object_from_hash(val)
+    HourlyWeatherBuilder.new
+        .hour(val[:time])
+        .precipitation(val[:precipitation])
+        .description(val[:description])
+        .temperature(val[:temperature])
+        .hourly_weather
   end
 
 
