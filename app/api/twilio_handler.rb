@@ -5,7 +5,7 @@ require "byebug"
 
 
 class TwilioHandler
-  include Authenticator,MessageBuilder
+  include Authenticator
 
   def initialize
     @authenticate = Authenticator.authenticate_test_environment

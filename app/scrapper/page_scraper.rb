@@ -18,14 +18,17 @@ class PageScraper
   end
 
   def get_hourly_table
-    hourly_table ={}
+    @hourly_table ={}
     table = nokogiri.at(TABLE_SEARCH_QUERY)
     table.search('tr').drop(1).each do |tr|
       val = convert_row_into_hash tr
       hourly_report = new_object_from_hash val
-      hourly_table[val[:time]] = hourly_report
+      @hourly_table[val[:time]] = hourly_report
     end
-    hourly_table
+    remove_invalid_chars_from_key
+    remove_invalid_chars_from_hours
+
+    @hourly_table
   end
 
   private
@@ -38,6 +41,14 @@ class PageScraper
         :temperature => arr[3],
         :precipitation => arr[5]
     }
+  end
+
+  def remove_invalid_chars_from_key
+    @hourly_table.keys.each{|key| @hourly_table[key.to_s.gsub(/"/, '')]=@hourly_table.delete(key)}
+  end
+
+  def remove_invalid_chars_from_hours
+    return @hourly_table.each_pair{|_,value| value.hour=value.hour.gsub(/"/, '')}    
   end
 
   def new_object_from_hash(val)

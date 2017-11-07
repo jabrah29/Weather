@@ -38,7 +38,6 @@ describe MessageBuilder do
         :current_precipitation => '45%'
       }
       message = @message_builder.generate_daily_message(params)
-      byebug
     end
   end
 

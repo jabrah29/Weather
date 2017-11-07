@@ -10,24 +10,25 @@ class MessageBuilder
   end
 
   def report_description(description)
-    return 'Expect rain 🌧 ☂' if raining?(description)
-    return 'Sunny!🕶 ☀' if sunny?(description)
-    return 'Storming ⚡ 🌩' if storming?(description)
-    return 'Cloudy ☁ 😞' if cloudy?(description)
+    return 'Expect rain 🌧 ☂ ' if raining?(description)
+    return 'Sunny!🕶 ☀ ' if sunny?(description)
+    return 'Storming ⚡ 🌩 ' if storming?(description)
+    return 'Cloudy ☁ 😞 ' if cloudy?(description)
     return 'None'
   end
 
   def generate_daily_message(params)
-    byebug
-    "#{BASE_MESSAGE} \n
-     Current Temp: #{params[:current_tempF]} F   #{params[:current_tempC]} C
+    x= "#{BASE_MESSAGE} \n
+     Current Temp: #{params[:temp_in_f]} F   #{params[:temp_in_c]} C
      Description: #{report_description(params[:description])}
-     Precipitation: #{params[:current_precipitation]}"
+     Precipitation: #{params[:precipitation]}"
+     byebug
   end
 
   private
 
   def raining?(description)
+    byebug
     return WeatherConditions::RAIN.any? {|cond| description.include? cond }
   end
 
