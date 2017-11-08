@@ -13,8 +13,8 @@ module Authenticator
   end
 
   def self.authenticate_dev_environment
-    @account_sid = 'AC60fa82cb269497e49968f7c239863448'
-    @auth_token = '0e347795eecff6641f6c3408671fb4f3'
+    @account_sid = ENV[TWILIO_KEY]
+    @auth_token = ENV[TWILIO_SECRET]
   end
 
   def self.account_sid

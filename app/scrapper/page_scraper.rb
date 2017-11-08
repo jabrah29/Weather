@@ -37,7 +37,7 @@ class PageScraper
   private
 
   def convert_row_into_hash(row)
-    
+
    arr= CSV.generate_line(row.children).split(',')
     {
         :time => arr[1].split.first,
