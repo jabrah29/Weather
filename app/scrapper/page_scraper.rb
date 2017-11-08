@@ -20,10 +20,13 @@ class PageScraper
   def get_hourly_table
     @hourly_table ={}
     table = nokogiri.at(TABLE_SEARCH_QUERY)
+    index =0
     table.search('tr').drop(1).each do |tr|
+      break if index == 3
       val = convert_row_into_hash tr
       hourly_report = new_object_from_hash val
       @hourly_table[val[:time]] = hourly_report
+      index+=1
     end
     remove_invalid_chars_from_key
     remove_invalid_chars_from_hours
@@ -34,6 +37,7 @@ class PageScraper
   private
 
   def convert_row_into_hash(row)
+    
    arr= CSV.generate_line(row.children).split(',')
     {
         :time => arr[1].split.first,

@@ -18,17 +18,14 @@ class MessageBuilder
   end
 
   def generate_daily_message(params)
-    x= "#{BASE_MESSAGE} \n
-     Current Temp: #{params[:temp_in_f]} F   #{params[:temp_in_c]} C
-     Description: #{report_description(params[:description])}
-     Precipitation: #{params[:precipitation]}"
-     byebug
+    byebug
+    x= "#{BASE_MESSAGE} \nhour: #{params[:hour]}\nCurrent Temp: #{params[:temp_in_f]}F   #{params[:temp_in_c]}°C\nDescription: #{report_description(params[:description])}\nPrecipitation: #{params[:precipitation]}"
+
   end
 
   private
 
   def raining?(description)
-    byebug
     return WeatherConditions::RAIN.any? {|cond| description.include? cond }
   end
 

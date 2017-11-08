@@ -10,22 +10,22 @@ describe MessageBuilder do
   describe '#report_description' do
     it 'returns rain message based on incoming description' do
       result = @message_builder.report_description('Showers')
-      expect(result).to eq('Expect rain 🌧 ☂')
+      expect(result).to eq('Expect rain 🌧 ☂ ')
     end
 
     it 'returns sunny message based on incoming description' do
       result = @message_builder.report_description('Mostly Sunny')
-      expect(result).to eq('Sunny!🕶 ☀')
+      expect(result).to eq('Sunny!🕶 ☀ ')
     end
 
     it 'returns cloudy message based on incoming description' do
       result = @message_builder.report_description('Cloudy')
-      expect(result).to eq('Cloudy ☁ 😞')
+      expect(result).to eq('Cloudy ☁ 😞 ')
     end
 
     it 'returns stormy message based on incoming description' do
       result = @message_builder.report_description('Scattered Thunderstorms')
-      expect(result).to eq('Storming ⚡ 🌩')
+      expect(result).to eq('Storming ⚡ 🌩 ')
     end
   end
 

@@ -7,17 +7,21 @@ require 'bigdecimal/math'
 class Application
   def run
     twilio_handler = TwilioHandler.new
+   # twilio_handler.authenticate
     scrapper = PageScraper.new
     table = scrapper.get_hourly_table
     
     message_builder = MessageBuilder.new
-    
-    message_builder.generate_daily_message(message_params(table.first[1]))
-    #status =twilio_handler.send_message('6475687414',message.to_s)
+    byebug
+    message = message_builder.generate_daily_message(message_params(table.first[1]))
+    twilio_handler.authenticate(TwilioHandler.run_as_dev)
+    twilio_handler.initiate_instance
+    status =twilio_handler.send_message('6475687414',message.to_s)
   end
 
   def message_params(hour)
     return {
+        :hour => hour.hour,
         :temp_in_f => hour.temperature,
         :temp_in_c => hour.to_celcius(hour.temperature),
         :description => hour.description,
